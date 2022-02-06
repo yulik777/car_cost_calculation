@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,68 +8,72 @@
     <link rel="stylesheet" href="./assets/styles/normalize.css">
     <link rel="stylesheet" href="./assets/styles/style.css">
     <title>Рассчет стоимости авто</title>
- </head>
- <body>
-  <form>
-    <h1 class="header">Калькулятор стоимости авто</h1>
-    <div class="tipKuzova">
-        <h3>Тип кузова</h3>
-        <input type="radio" id="Sedan" name="tipKuzova" value="3000">
-        <label for="Sedan">Седан</label>
-        <input type="radio" id="Vnedoroznik" name="tipKuzova" value="4000">
-        <label for="Vnedoroznik">Внедорожник</label>
-        <input type="radio"  id="Cupe"name="tipKuzova" value="5000">
-        <label for="Cupe">Купе</label>
-        <input type="radio" id="Cabrio"name="tipKuzova" value="6000">
-        <label for="Cabrio">Кабриолет</label>
-    </div>
-    <div class="Model">
-        <h3>Модель авто</h3>
-        <select class="modelAvto">
-            <option> Выберите модель</option>
-            <option  class="NissanModel" id="NissanModel" value="8000">Nissan Juke</option>
-            <option  id="NissanModel" value="9000">Nissan Qashqai</option>
-            <option  id="NissanModel" value="8000">Nissan X-Trail</option>
-             <option id="MazdaModel" value="5000">Mazda 3</option>
-            <option id="MazdaModel" value="8000">Mazda 6</option>
-            <option id="MazdaModel" value="6000">Mazda CX-5</option>
-            <option id="HondaModel" value="7000">Honda Accord</option>
-            <option id="HondaModel"value="6000">Honda Civic</option>
-            <option id="HondaModel" value="5000">Honda HR-V</option>
-            <option id="BMWModel" value="8000">BMW 8 Cupe</option>
-            <option id="BMWModel" value="9000">BMW 8 Cabriolet</option>
-            <option id="BMWModel" value="10000">BMW X 5</option>
-      
-        </select>
-    </div>
-    <div class="godVupuska">
-        <label for="year"><h3>Год выпуска</h3></label></br>
-        <input type="text" placeholder="Введите год выпуска" name="year" id="year" required>
-    </div>
-    <div class="KPP">
-        <h3>Тип коробки передач</h3>
-        <input type="radio" value="1000" id="avtomat"name="KPP">
-        <label for="avtomat">Автомат</label>
-        <input type="radio" value="500" id="mehanica"name="KPP">
-        <label for="mehanika">Механическая</label>
-     
-    </div>
-    <div class="toplivo">
-        <h3>Топливо</h3>
-        <input type="radio" id="benzin"name="toplivo" value="1000" >
-        <label for="benzin">Бензин</label>
-        <input type="radio" id="gas"name="toplivo" value="500" >
-        <label for="gas">Газ</label>
-        <input type="radio" id="gibrid"name="toplivo" value="1500" >
-        <label for="gibrid">Гибрид</label>
-    </div>
-    <div class="buttons">
-        <input type="button" id="price" value="Рассчитать цену" onclick="calculateForm();">
-        <div class="result"id="result">
-          Стоисмоть авто, $
+</head>
+
+<body>
+    <form>
+        <h1 class="header">Калькулятор стоимости авто</h1>
+        <div class="tipKuzova">
+            <h3>Тип кузова</h3>
+            <input type="radio" id="Sedan" name="tipKuzova" value="3000">
+            <label for="Sedan">Седан</label>
+            <input type="radio" id="Vnedoroznik" name="tipKuzova" value="4000">
+            <label for="Vnedoroznik">Внедорожник</label>
+            <input type="radio" id="Cupe" name="tipKuzova" value="5000">
+            <label for="Cupe">Купе</label>
+            <input type="radio" id="Cabrio" name="tipKuzova" value="6000">
+            <label for="Cabrio">Кабриолет</label>
         </div>
-    </div>
-  </form>
-    <script src="./main.js" ></script>
+        <div class="Model">
+            <h3>Модель авто</h3>
+            <select class="modelAvto">
+                <option> Выберите модель</option>
+                <option class="NissanModel" id="NissanModel" value="8000">Nissan Juke</option>
+                <option id="NissanModel" value="9000">Nissan Qashqai</option>
+                <option id="NissanModel" value="8000">Nissan X-Trail</option>
+                <option id="MazdaModel" value="5000">Mazda 3</option>
+                <option id="MazdaModel" value="8000">Mazda 6</option>
+                <option id="MazdaModel" value="6000">Mazda CX-5</option>
+                <option id="HondaModel" value="7000">Honda Accord</option>
+                <option id="HondaModel" value="6000">Honda Civic</option>
+                <option id="HondaModel" value="5000">Honda HR-V</option>
+                <option id="BMWModel" value="8000">BMW 8 Cupe</option>
+                <option id="BMWModel" value="9000">BMW 8 Cabriolet</option>
+                <option id="BMWModel" value="10000">BMW X 5</option>
+
+            </select>
+        </div>
+        <div class="godVupuska">
+            <label for="year">
+                <h3>Год выпуска</h3>
+            </label></br>
+            <input type="text" placeholder="Введите год выпуска" name="year" id="year" required>
+        </div>
+        <div class="KPP">
+            <h3>Тип коробки передач</h3>
+            <input type="radio" value="1000" id="avtomat" name="KPP">
+            <label for="avtomat">Автомат</label>
+            <input type="radio" value="500" id="mehanica" name="KPP">
+            <label for="mehanika">Механическая</label>
+
+        </div>
+        <div class="toplivo">
+            <h3>Топливо</h3>
+            <input type="radio" id="benzin" name="toplivo" value="1000">
+            <label for="benzin">Бензин</label>
+            <input type="radio" id="gas" name="toplivo" value="500">
+            <label for="gas">Газ</label>
+            <input type="radio" id="gibrid" name="toplivo" value="1500">
+            <label for="gibrid">Гибрид</label>
+        </div>
+        <div class="buttons">
+            <input type="button" id="price" value="Рассчитать цену" onclick="calculateForm();">
+            <div class="result" id="result">
+                Стоисмоть авто, $
+            </div>
+        </div>
+    </form>
+
 </body>
+
 </html>
